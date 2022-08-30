@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetrolStation", "PetrolStation\PetrolStation.csproj", "{9FCF80C5-CA5C-448E-8D4C-6D3BFD6B67B9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94684D3C-498E-4690-90EA-CE6A566382C6} = {94684D3C-498E-4690-90EA-CE6A566382C6}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetrolStation.Core", "PetrolStation.Core\PetrolStation.Core.csproj", "{94684D3C-498E-4690-90EA-CE6A566382C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FCF80C5-CA5C-448E-8D4C-6D3BFD6B67B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FCF80C5-CA5C-448E-8D4C-6D3BFD6B67B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FCF80C5-CA5C-448E-8D4C-6D3BFD6B67B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FCF80C5-CA5C-448E-8D4C-6D3BFD6B67B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94684D3C-498E-4690-90EA-CE6A566382C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94684D3C-498E-4690-90EA-CE6A566382C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94684D3C-498E-4690-90EA-CE6A566382C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94684D3C-498E-4690-90EA-CE6A566382C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00D3F72A-851A-438C-A8B3-526D81BAE96F}
+	EndGlobalSection
+EndGlobal
