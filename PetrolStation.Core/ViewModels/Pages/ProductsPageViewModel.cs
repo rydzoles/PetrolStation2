@@ -11,16 +11,17 @@ namespace PetrolStation.Core
     public class ProductsPageViewModel //: IReckoningInMIniliters
     {
         // public double Miniliter { get; set; }
-        ProductViewModel productVIewModel { get; set; }
+    //    ProductViewModel productVIewModel { get; set; }
         public string[] productDetailsFromTextFile { get; set; }
-        ObservableCollection<ProductViewModel> _finalList;
-        public ObservableCollection<ProductViewModel> FinalLIst
+        private ObservableCollection<ProductViewModel> _finalList= new ObservableCollection<ProductViewModel>();
+        public ObservableCollection<ProductViewModel> FinalLIst// ObservableCollection<ProductViewModel> FinalLIst
         {
-            get => _finalList;
+            get => _finalList ;
             set
             {
                 _finalList = value;
-                OnPropertyChanged("FuelType.txt");
+                OnPropertyChanged("FinalLIst");
+
             }
         }
         public event PropertyChangedEventHandler PropertyChanged;
@@ -33,11 +34,11 @@ namespace PetrolStation.Core
         public double price { get; set; }
         public ICommand AddNewProductCommand { get; set; }
 
-        //public ProductsPageViewModel()
-        //{
-        //    GetProductInformationFromFile("FuelType.txt");
-        //    AddNewProductCommand = new RelayCommand(ProductAndPriceAssign);
-        //}
+        public ProductsPageViewModel()
+        {
+            GetProductInformationFromFile("FuelType.txt");
+            AddNewProductCommand = new RelayCommand(ProductAndPriceAssign);
+        }
       
         public void GetProductInformationFromFile(string path)
         {
@@ -47,7 +48,7 @@ namespace PetrolStation.Core
         }
         public void ProductAndPriceAssign()
         {
-           // AddNewProductCommand = new RelayCommand(ProductAndPriceAssign);
+            AddNewProductCommand = new RelayCommand(ProductAndPriceAssign);
             string[] uu = productDetailsFromTextFile;
             int counter = 0;
             foreach (var line in uu)

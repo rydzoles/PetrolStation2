@@ -22,7 +22,7 @@ namespace PetrolStation
         public ProductsPage()
         {
             InitializeComponent();
-         //   DataContext = new ProductsPageViewModel();
+          //  DataContext = new ProductsPageViewModel();
         }
     }
 }

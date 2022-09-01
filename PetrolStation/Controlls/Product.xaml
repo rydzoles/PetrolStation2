@@ -6,8 +6,5 @@
              xmlns:local="clr-namespace:PetrolStation"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock Text="{Binding name}"/>
-        <TextBlock Text="{Binding price}"/>
-    </Grid>
+    <local:ProductsPage/>
 </UserControl>
