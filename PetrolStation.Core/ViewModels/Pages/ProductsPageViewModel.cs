@@ -16,12 +16,11 @@ namespace PetrolStation.Core
         private ObservableCollection<ProductViewModel> _finalList= new ObservableCollection<ProductViewModel>();
         public ObservableCollection<ProductViewModel> FinalLIst// ObservableCollection<ProductViewModel> FinalLIst
         {
-            get => _finalList ;
+            get => _finalList;
             set
             {
                 _finalList = value;
                 OnPropertyChanged("FinalLIst");
-
             }
         }
         public event PropertyChangedEventHandler PropertyChanged;
