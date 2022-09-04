@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-     xmlns:local="clr-namespace:PetrolStation"
+     xmlns:local="clr-namespace:PetrolStation;assembly=PetrolStation"
       xmlns:core="clr-namespace:PetrolStation.Core;assembly=PetrolStation.Core"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -11,21 +11,27 @@
     <Page.DataContext>
         <core:ProductsPageViewModel/>
     </Page.DataContext>
-<Grid >
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Width="222" Height="111">
-            <ItemsControl  ItemsSource="{Binding FinalLIst}">
+        <Grid>
+
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Grid></Grid>
+            <ListView x:Name="fuelTableDG"   ItemsSource="{Binding FinalLIst}" SelectedItem="selectedFuel">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="{Binding Path=ProductName}" Margin="0,0,5,0"/>
-                            <TextBlock Text="{Binding Path=ProductPrice}"/>
+                            <TextBlock x:Name="fuelNAME" Text="{Binding Path=ProductName}" Margin="0,0,5,0"/>
+                            <TextBlock x:Name="fuelPRICE" Text="{Binding Path=ProductPrice}" />
                         </StackPanel>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
-            </ItemsControl>
+            </ListView>
+            
+            <Button  HorizontalAlignment="Center" VerticalAlignment="Center" Width="111" Height="22" Margin="51,99,5,5"/>
+            <TextBlock Name="gotFuelValue" Text="{Binding fuelTableDG,Path=price}" Margin=" 5,5,5,5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
         </StackPanel>
-        <Button HorizontalAlignment="Center" 
-                VerticalAlignment="Center" Height="22" Width="222" 
-                Command="{Binding AddNewProductCommand}"/>
+
     </Grid>
+
 </Page>

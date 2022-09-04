@@ -21,8 +21,13 @@ namespace PetrolStation
     {
         public ProductsPage()
         {
-            InitializeComponent();
+           InitializeComponent();
           //  DataContext = new ProductsPageViewModel();
+        }
+
+        private void FuelLIstView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

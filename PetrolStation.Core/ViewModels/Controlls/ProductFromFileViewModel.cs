@@ -14,7 +14,7 @@ namespace PetrolStation
         public static string[] productDetailsFromTextFile { get; set; }
         public ObservableCollection<ProductViewModel> finallLIst = new ObservableCollection<ProductViewModel>();
         public string name { get; set; }
-        public double price { get; set; }
+        public double price { get; set; } = 0.0;
      //   public ICommand AddListCommand { get; set; } 
         //public ProductFromFileViewModel()
         //{
