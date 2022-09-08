@@ -25,9 +25,9 @@ namespace PetrolStation
           //  DataContext = new ProductsPageViewModel();
         }
 
-        private void FuelLIstView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void fuelTableDG_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            
         }
     }
 }

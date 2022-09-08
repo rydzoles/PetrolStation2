@@ -15,14 +15,15 @@ namespace PetrolStation
         public ObservableCollection<ProductViewModel> finallLIst = new ObservableCollection<ProductViewModel>();
         public string name { get; set; }
         public double price { get; set; } = 0.0;
-     //   public ICommand AddListCommand { get; set; } 
+     
+        //   public ICommand AddListCommand { get; set; } 
         //public ProductFromFileViewModel()
         //{
-            
+
         //    GetProductInformationFromFile("FuelType.txt");
         //    AddListCommand = new RelayCommand(ProductAndPriceAssign);
         //}
-      public void GetProductInformationFromFile(string path)
+        public void GetProductInformationFromFile(string path)
         {
            var lines= File.ReadAllLines(path);
             productDetailsFromTextFile = lines;

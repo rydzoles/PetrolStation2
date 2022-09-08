@@ -5,7 +5,7 @@ namespace PetrolStation
 {
     public class RelayCommand : ICommand
     {
-       private Action mAction;
+        private Action mAction;
         public event EventHandler CanExecuteChanged;
 
         public RelayCommand(Action action)
@@ -21,5 +21,8 @@ namespace PetrolStation
         {
             mAction();
         }
+
+       
     }
 }
+        

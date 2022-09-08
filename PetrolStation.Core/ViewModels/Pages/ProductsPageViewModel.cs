@@ -8,12 +8,38 @@ using System.Windows.Input;
 
 namespace PetrolStation.Core
 {
-    public class ProductsPageViewModel //: IReckoningInMIniliters
+    public class ProductsPageViewModel :INotifyPropertyChanged //: IReckoningInMIniliters
     {
         // public double Miniliter { get; set; }
     //    ProductViewModel productVIewModel { get; set; }
         public string[] productDetailsFromTextFile { get; set; }
         private ObservableCollection<ProductViewModel> _finalList= new ObservableCollection<ProductViewModel>();
+
+
+        private ProductViewModel _selectedFuel;
+        
+        public ProductViewModel SelectedFuel
+        {
+            get => _selectedFuel;
+            set
+            {
+                _selectedFuel = value;
+                OnPropertyChanged("SelectedFuel");
+                if (SelectedFuel != null)
+                    ProductPrice = SelectedFuel.ProductPrice;
+            }
+
+        }
+        private double _productPrice;
+        public double ProductPrice
+        {
+            get => _productPrice;
+            set
+            {
+                _productPrice = value;
+                OnPropertyChanged("ProductPrice");
+            }
+        }
         public ObservableCollection<ProductViewModel> FinalLIst// ObservableCollection<ProductViewModel> FinalLIst
         {
             get => _finalList;

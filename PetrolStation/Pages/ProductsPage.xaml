@@ -14,23 +14,24 @@
         <Grid>
 
 
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Name="FuelListStPnl">
             <Grid></Grid>
-            <ListView x:Name="fuelTableDG"   ItemsSource="{Binding FinalLIst}" SelectedItem="selectedFuel">
+            <ListView x:Name="fuelTableDG" ItemsSource="{Binding FinalLIst}" SelectedItem="SelectedFuel">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock x:Name="fuelNAME" Text="{Binding Path=ProductName}" Margin="0,0,5,0"/>
-                            <TextBlock x:Name="fuelPRICE" Text="{Binding Path=ProductPrice}" />
+                            <TextBlock x:Name="fuelPRICE"  Text="{Binding Path=ProductPrice}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ListView>
-            
-            <Button  HorizontalAlignment="Center" VerticalAlignment="Center" Width="111" Height="22" Margin="51,99,5,5"/>
-            <TextBlock Name="gotFuelValue" Text="{Binding fuelTableDG,Path=price}" Margin=" 5,5,5,5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock Name="gotFuelValue" Text="{Binding  Path=ProductPrice}"  Margin=" 5,5,5,5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
 
         </StackPanel>
+        <Button  HorizontalAlignment="Center" VerticalAlignment="Center" Width="111" Height="22" Margin="51,99,5,5"/>
 
     </Grid>
 
