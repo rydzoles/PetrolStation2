@@ -12,11 +12,9 @@
         <core:ProductsPageViewModel/>
     </Page.DataContext>
         <Grid>
-
-
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Name="FuelListStPnl">
             <Grid></Grid>
-            <ListView x:Name="fuelTableDG" ItemsSource="{Binding FinalLIst}" SelectedItem="SelectedFuel">
+            <ListView x:Name="fuelTableDG" ItemsSource="{Binding FinalLIst}" SelectedItem="{Binding SelectedFuel}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
